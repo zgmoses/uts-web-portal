@@ -1,3 +1,7 @@
+/* =====================================================
+   1. RESET & GLOBAL STYLE
+===================================================== */
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +15,10 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* =====================================================
+   2. HEADER & NAVBAR
+===================================================== */
+
 .header {
   width: 100%;
   padding: 20px 8%;
@@ -37,11 +44,52 @@ body {
   font-weight: 600;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: #2563eb;
 }
 
-/* Hero */
+.navbar a.active {
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 4px;
+}
+
+/* =====================================================
+   3. BUTTON STYLE
+===================================================== */
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.btn-secondary:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* =====================================================
+   4. INDEX.HTML - HERO SECTION
+===================================================== */
+
 .hero {
   padding: 70px 8%;
   display: flex;
@@ -73,34 +121,6 @@ body {
   gap: 15px;
 }
 
-.btn-primary,
-.btn-secondary {
-  display: inline-block;
-  padding: 13px 24px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn-primary {
-  background-color: #2563eb;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #1d4ed8;
-}
-
-.btn-secondary {
-  border: 2px solid #2563eb;
-  color: #2563eb;
-}
-
-.btn-secondary:hover {
-  background-color: #2563eb;
-  color: white;
-}
-
 .hero-image {
   flex: 1;
 }
@@ -113,7 +133,10 @@ body {
   box-shadow: 0 15px 35px rgba(37, 99, 235, 0.25);
 }
 
-/* Section */
+/* =====================================================
+   5. INDEX.HTML - SECTION & CARD
+===================================================== */
+
 .section {
   padding: 70px 8%;
   text-align: center;
@@ -130,7 +153,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* Card */
 .card-container {
   display: flex;
   gap: 25px;
@@ -160,7 +182,10 @@ body {
   transition: 0.3s;
 }
 
-/* Light Section */
+/* =====================================================
+   6. INDEX.HTML - FEATURES & CTA
+===================================================== */
+
 .light {
   background-color: #eff6ff;
 }
@@ -184,7 +209,6 @@ body {
   font-size: 17px;
 }
 
-/* CTA */
 .cta {
   padding: 70px 8%;
   text-align: center;
@@ -211,52 +235,11 @@ body {
   background-color: #dbeafe;
 }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #0f172a;
-  color: white;
-}
+/* =====================================================
+   7. HEADER HALAMAN MENU
+   Dipakai di: kursus, jadwal, artikel, kontak
+===================================================== */
 
-/* Responsive */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .navbar a {
-    margin: 0 8px;
-    font-size: 14px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
-  }
-
-  .hero-button {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .card-container {
-    flex-direction: column;
-  }
-
-  .card {
-    width: 100%;
-  }
-}
-
-/* css untuk kursus.html */
-
-/* Page Header */
 .page-header {
   padding: 70px 8%;
   text-align: center;
@@ -276,7 +259,10 @@ body {
   font-size: 17px;
 }
 
-/* Course Page */
+/* =====================================================
+   8. KURSUS.HTML
+===================================================== */
+
 .course-section {
   padding: 70px 8%;
   display: grid;
@@ -339,19 +325,10 @@ body {
   color: #334155;
 }
 
-/* Responsive Course */
-@media (max-width: 768px) {
-  .course-section {
-    grid-template-columns: 1fr;
-  }
+/* =====================================================
+   9. JADWAL.HTML
+===================================================== */
 
-  .page-header h1 {
-    font-size: 32px;
-  }
-}
-
-/* css untuk jadwal.html*/
-/* Schedule Page */
 .schedule-section {
   padding: 70px 8%;
   background-color: #f8fafc;
@@ -407,8 +384,10 @@ th:first-child {
   text-align: center;
 }
 
-/* css untuk artikel.html*/
-/* Artikel Page */
+/* =====================================================
+   10. ARTIKEL.HTML
+===================================================== */
+
 .artikel-section {
   padding: 70px 8%;
   display: grid;
@@ -455,16 +434,10 @@ th:first-child {
   text-decoration: underline;
 }
 
-/* Responsive Artikel */
-@media (max-width: 768px) {
-  .artikel-section {
-    grid-template-columns: 1fr;
-  }
-}
+/* =====================================================
+   11. KONTAK.HTML
+===================================================== */
 
-/* css untuk kontak.html*/
-
-/* Contact Page */
 .contact-section {
   padding: 70px 8%;
   display: grid;
@@ -549,16 +522,64 @@ th:first-child {
   background-color: #1d4ed8;
 }
 
-/* Responsive Contact */
+/* =====================================================
+   12. FOOTER
+===================================================== */
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #0f172a;
+  color: white;
+}
+
+/* =====================================================
+   13. RESPONSIVE - TAMPILAN HP/TABLET
+===================================================== */
+
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-button {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .course-section,
+  .artikel-section {
+    grid-template-columns: 1fr;
+  }
+
   .contact-section {
     grid-template-columns: 1fr;
   }
-}
 
-/* Active Navbar */
-.navbar a.active {
-  color: #2563eb;
-  border-bottom: 2px solid #2563eb;
-  padding-bottom: 4px;
+  .page-header h1 {
+    font-size: 32px;
+  }
 }
