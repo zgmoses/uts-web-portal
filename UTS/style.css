@@ -1,7 +1,4 @@
-/* =====================================================
-   1. RESET & GLOBAL STYLE
-===================================================== */
-
+/*  STYLE GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -9,20 +6,18 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  font-family: Arial, Helvetica;
+  background-color: #d1d1d1;
+  color: #0d2d60;
   line-height: 1.6;
 }
 
-/* =====================================================
-   2. HEADER & NAVBAR
-===================================================== */
+/*  HEADER & NAVBAR */
 
 .header {
   width: 100%;
   padding: 20px 8%;
-  background-color: #ffffff;
+  background-color: #FAF9F6;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,30 +28,32 @@ body {
 }
 
 .logo h2 {
-  color: #2563eb;
+  color: #1d4ed8;
   font-size: 24px;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #334155;
+  color: #1d4ed8;
   margin-left: 25px;
   font-weight: 600;
 }
 
 .navbar a:hover,
 .navbar a.active {
-  color: #2563eb;
+  color: #0d2d60;
 }
 
 .navbar a.active {
-  border-bottom: 2px solid #2563eb;
+  border-bottom: 2px solid #0d2d60;
   padding-bottom: 4px;
 }
 
-/* =====================================================
-   3. BUTTON STYLE
-===================================================== */
+.tanpa-garis{
+  text-decoration: none;
+}
+
+/*  BUTTON STYLE */
 
 .btn-primary,
 .btn-secondary {
@@ -68,7 +65,7 @@ body {
 }
 
 .btn-primary {
-  background-color: #2563eb;
+  background-color: #0d2966;
   color: white;
 }
 
@@ -77,18 +74,16 @@ body {
 }
 
 .btn-secondary {
-  border: 2px solid #2563eb;
-  color: #2563eb;
+  border: 2px solid #0d2966;
+  color: #0d2966;
 }
 
 .btn-secondary:hover {
-  background-color: #2563eb;
-  color: white;
+  background-color: #0d2966;
+  color: rgb(176, 169, 169);
 }
 
-/* =====================================================
-   4. INDEX.HTML - HERO SECTION
-===================================================== */
+/* BERANDA - HERO SECTION */
 
 .hero {
   padding: 70px 8%;
@@ -96,7 +91,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  background: linear-gradient(135deg, #eff6ff, #ffffff);
+  background: linear-gradient(135deg, #eff6ff, #f3f1a5);
 }
 
 .hero-text {
@@ -133,9 +128,7 @@ body {
   box-shadow: 0 15px 35px rgba(37, 99, 235, 0.25);
 }
 
-/* =====================================================
-   5. INDEX.HTML - SECTION & CARD
-===================================================== */
+/* BERANDA- SECTION & CARD */
 
 .section {
   padding: 70px 8%;
@@ -182,12 +175,13 @@ body {
   transition: 0.3s;
 }
 
-/* =====================================================
-   6. INDEX.HTML - FEATURES & CTA
-===================================================== */
-
-.light {
-  background-color: #eff6ff;
+/*  BERANDA - FEATURES & CTA */
+ 
+.features-section {
+    padding: 70px 40px;
+    background:linear-gradient(135deg, #eff6ff, #f3f1a5) ;
+    text-align: center;
+    font-family: Arial, Helvetica; 
 }
 
 .features {
@@ -200,19 +194,60 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
-.features ul {
-  padding-left: 25px;
+.features-section {
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.features li {
-  margin-bottom: 12px;
-  font-size: 17px;
+.features-section h2 {
+    color: #1E3A8A; 
+    margin-bottom: 40px;
+    font-size: 2rem;
 }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 184, 77, 0.2); 
+}
+
+/* Efek interaktif saat kursor diarahkan ke card */
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #1E3A8A;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #1872f0; 
+    line-height: 1.5;
+}
+
 
 .cta {
   padding: 70px 8%;
   text-align: center;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #2563eb, #0d2966);
   color: white;
 }
 
@@ -228,22 +263,19 @@ body {
 
 .cta .btn-primary {
   background-color: white;
-  color: #2563eb;
+  color: #0d2966;
 }
 
 .cta .btn-primary:hover {
-  background-color: #dbeafe;
+  background-color: #fedbdb;
 }
 
-/* =====================================================
-   7. HEADER HALAMAN MENU
-   Dipakai di: kursus, jadwal, artikel, kontak
-===================================================== */
+/* HEADER HALAMAN MENU(Dipakai di: kursus, jadwal, artikel, kontak) */
 
 .page-header {
   padding: 70px 8%;
   text-align: center;
-  background: linear-gradient(135deg, #eff6ff, #ffffff);
+ background:linear-gradient(135deg, #eff6ff, #f3f1a5) ;
 }
 
 .page-header h1 {
@@ -259,9 +291,7 @@ body {
   font-size: 17px;
 }
 
-/* =====================================================
-   8. KURSUS.HTML
-===================================================== */
+/*  8. KURSUS.HTML */
 
 .course-section {
   padding: 70px 8%;
@@ -325,9 +355,7 @@ body {
   color: #334155;
 }
 
-/* =====================================================
-   9. JADWAL.HTML
-===================================================== */
+/* 9. JADWAL.HTML */
 
 .schedule-section {
   padding: 70px 8%;
@@ -364,7 +392,7 @@ table {
 }
 
 thead {
-  background-color: #2563eb;
+  background-color: #0d2966;
   color: white;
 }
 
@@ -384,9 +412,7 @@ th:first-child {
   text-align: center;
 }
 
-/* =====================================================
-   10. ARTIKEL.HTML
-===================================================== */
+/* 10. ARTIKEL.HTML */
 
 .artikel-section {
   padding: 70px 8%;
@@ -434,9 +460,7 @@ th:first-child {
   text-decoration: underline;
 }
 
-/* =====================================================
-   11. KONTAK.HTML
-===================================================== */
+/* 11. KONTAK.HTML */
 
 .contact-section {
   padding: 70px 8%;
@@ -509,7 +533,7 @@ th:first-child {
 .submit-btn {
   width: 100%;
   padding: 14px;
-  background-color: #2563eb;
+  background-color: #0d2966;
   color: white;
   border: none;
   border-radius: 10px;
@@ -522,9 +546,7 @@ th:first-child {
   background-color: #1d4ed8;
 }
 
-/* =====================================================
-   12. FOOTER
-===================================================== */
+/* 12. FOOTER */
 
 .footer {
   padding: 20px;
@@ -533,53 +555,3 @@ th:first-child {
   color: white;
 }
 
-/* =====================================================
-   13. RESPONSIVE - TAMPILAN HP/TABLET
-===================================================== */
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .navbar a {
-    margin: 0 8px;
-    font-size: 14px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-text h1 {
-    font-size: 34px;
-  }
-
-  .hero-button {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .card-container {
-    flex-direction: column;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .course-section,
-  .artikel-section {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-section {
-    grid-template-columns: 1fr;
-  }
-
-  .page-header h1 {
-    font-size: 32px;
-  }
-}
